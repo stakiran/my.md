@@ -18,6 +18,12 @@ Your personal rules are usually short — things like "reply in Japanese" or "us
 
 With `my.md` in `.claude/rules/`, your personal rules live alongside other rule files — `team-conventions.md`, `code-style.md`, and `my.md`. The structure tells the story at a glance: team rules + your rules, all in one place with consistent granularity.
 
+### No workaround needed
+
+Some suggest using `@import` in `CLAUDE.md` to include a personal file (e.g., `@~/.claude/my-preferences.md`) as an alternative to `CLAUDE.local.md`. But this has a fundamental problem: where do you write the `@import` line? If you add it to the shared `CLAUDE.md`, it gets committed. If you add it to `CLAUDE.local.md`, you might as well write your rules there directly.
+
+With `my.md`, there's nothing to wire up. Files in `.claude/rules/` are auto-loaded — no import lines, no indirection, and no worktree issues since rules are picked up from every worktree automatically.
+
 ### Easy to adopt
 
 Just two steps for any project:
