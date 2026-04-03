@@ -10,9 +10,13 @@ Claude Code officially provides `CLAUDE.local.md` for personal project overrides
 - `my.md` — instantly clear that this is *your* personal file. No ambiguity.
 - `CLAUDE.local.md` — what does "local" mean? Local machine? Local branch? You have to *know* the convention to understand it.
 
+### Right-sized for what you actually write
+
+Your personal rules are usually short — things like "reply in Japanese" or "use this commit format." A root-level `CLAUDE.local.md` feels like overkill for a few one-liners. A small file in `rules/` matches the actual granularity of what you're writing.
+
 ### Clean separation
 
-With `my.md` in `.claude/rules/`, your personal rules live alongside other rule files — neatly organized and clearly scoped. There's no risk of confusing your personal config with the project-level `CLAUDE.md` that the whole team shares.
+With `my.md` in `.claude/rules/`, your personal rules live alongside other rule files — `team-conventions.md`, `code-style.md`, and `my.md`. The structure tells the story at a glance: team rules + your rules, all in one place with consistent granularity.
 
 ### Easy to adopt
 
